@@ -1,0 +1,13 @@
+.contentBox {
+  background: #fff;
+  border-radius: 10px;
+  padding: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contentBox {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+}

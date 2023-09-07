@@ -1,0 +1,24 @@
+.siteWrapper {
+  position: relative;
+}
+
+.contentWrapper {
+  padding-top: 6.5rem;
+}
+
+.mainWrapper {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1280px) {
+  .contentWrapper {
+    padding-left: 28rem;
+  }
+
+  .mainWrapper {
+    padding: 4rem;
+  }
+}

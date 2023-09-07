@@ -1,0 +1,46 @@
+var _g, _defs;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+var SvgIconboxArt = function SvgIconboxArt(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 140,
+    height: 140,
+    fill: "none"
+  }, props), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    fill: "#202127",
+    clipPath: "url(#iconbox-art_svg__a)",
+    filter: "url(#iconbox-art_svg__b)",
+    opacity: 0.1
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M128.903 55.992 77.199 13.283l-45.174 26.08L92.611 87.79l36.292-31.798Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "m84.92 94.736-7.67-81.483-45.242 26.121 8.842 97.731 44.07-42.369Z"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "m20.86 156.847.06.059 43.97-42.258-51.565-41.185 7.535 83.384ZM77.25 13.253 32.026 39.364 83.58 80.526l-6.33-67.273Z"
+  }))), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+    id: "iconbox-art_svg__a"
+  }, /*#__PURE__*/React.createElement("path", {
+    fill: "#fff",
+    d: "m157.372 80.832-121.244 70-53.5-92.664 121.244-70z"
+  })), /*#__PURE__*/React.createElement("filter", {
+    id: "iconbox-art_svg__b",
+    width: 254.744,
+    height: 242.665,
+    x: -57.372,
+    y: -51.832,
+    colorInterpolationFilters: "sRGB",
+    filterUnits: "userSpaceOnUse"
+  }, /*#__PURE__*/React.createElement("feFlood", {
+    floodOpacity: 0,
+    result: "BackgroundImageFix"
+  }), /*#__PURE__*/React.createElement("feBlend", {
+    "in": "SourceGraphic",
+    in2: "BackgroundImageFix",
+    result: "shape"
+  }), /*#__PURE__*/React.createElement("feGaussianBlur", {
+    result: "effect1_foregroundBlur_4374_20054",
+    stdDeviation: 20
+  })))));
+};
+export default SvgIconboxArt;

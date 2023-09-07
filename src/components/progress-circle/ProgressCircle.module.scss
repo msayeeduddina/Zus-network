@@ -1,0 +1,24 @@
+@import 'styles/common';
+
+.circleBackground,
+.circleProgress {
+  fill: none;
+}
+
+.circleBackground {
+  stroke-opacity: 0.2;
+}
+
+.circleProgress {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading {
+  animation: rotate 1s linear 0.5s infinite;
+
+  .circleProgress {
+    stroke-dasharray: 100 !important;
+    stroke-dashoffset: 80 !important;
+  }
+}

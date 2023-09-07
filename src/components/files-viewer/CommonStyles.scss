@@ -1,0 +1,39 @@
+@import 'styles/common';
+
+.btn {
+  @extend .clearStdStyles, .flexCenter;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out,
+    opacity 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  -ms-transition: background-color, 0.25s ease-in-out, 0.25s ease-in-out;
+  border-radius: 50%;
+  pointer-events: all;
+  cursor: pointer;
+
+  &:hover {
+    color: $primaryBlue;
+
+    svg path {
+      fill: $primaryBlue;
+    }
+  }
+
+  svg {
+    scale: 1.5;
+    transition: scale 0.25s ease-in-out;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:active {
+    text-decoration: none;
+    opacity: 0.5;
+  }
+}

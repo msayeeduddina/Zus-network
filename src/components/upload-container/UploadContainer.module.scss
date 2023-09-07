@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.halfCol {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+
+  .halfCol {
+    padding: 5.5rem;
+    flex-basis: 50%;
+  }
+}

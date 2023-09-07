@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+
+  webapp:
+    container_name: zus-webapp
+    image: zus_webapp
+    restart: unless-stopped
+    ports:
+      - 3007:3000
+    networks:
+      - proxy-tier
+
+networks:
+  proxy-tier:
+    driver: bridge

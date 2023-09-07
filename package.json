@@ -1,0 +1,38 @@
+{
+  "name": "zus-example-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "scss": "node-sass src/ -o src/ --recursive --watch"
+  },
+  "dependencies": {
+    "@next/font": "13.1.1",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@svgr/webpack": "^8.0.1",
+    "@zerochain/zus-sdk": "0.3.2",
+    "clsx": "^1.2.1",
+    "date-fns": "^2.30.0",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "framer-motion": "^10.12.16",
+    "jszip": "^3.10.1",
+    "mime": "^3.0.0",
+    "mux.js": "^6.3.0",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^7.2.8",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.62.0",
+    "ts-ebml": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "typescript": "5.0.4"
+  }
+}

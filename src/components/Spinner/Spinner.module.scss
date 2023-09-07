@@ -1,0 +1,25 @@
+.spinner {
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 50%;
+  border: .25rem solid rgb(var(--color-heading), .3);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    border: .4rem solid;
+    border-color: transparent;
+    border-right-color: rgb(var(--color-heading));
+    animation:s9 1s infinite;
+  }
+ //  animation:s9 2s infinite linear;
+}
+@keyframes s9 {to{transform: rotate(1turn)}}

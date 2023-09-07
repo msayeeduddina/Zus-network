@@ -1,0 +1,36 @@
+.wrapper {
+  font-size: 1.4rem;
+
+  table, th, td {
+    border: 1px solid rgba(139,139,139,.3);
+    border-collapse: collapse;
+  }
+
+  table {
+    background: #fff;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  th {
+    color: #000;
+    border-bottom-color: rgba(139,139,139,.6);
+    padding: .6rem 1.5rem;
+  }
+
+  td {
+    padding: 1.8rem 1.5rem;
+  }
+}
+
+.pagination {
+  color: rgb(var(--color-muted));
+
+  a {
+    color: inherit;
+  }
+
+  button {
+    color: inherit;
+  }
+}

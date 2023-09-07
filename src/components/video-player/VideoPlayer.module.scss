@@ -1,0 +1,338 @@
+@import 'styles/common';
+
+.wrapper {
+  @extend .flexCenterCol;
+  color: $primaryText;
+  position: relative;
+
+  &:hover .largePlayBtn svg {
+    scale: 1.1;
+  }
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 75px $darkGray;
+  object-fit: contain;
+
+  @media (max-width: 768px) {
+    min-width: 400px;
+  }
+}
+
+.fullScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black;
+}
+
+.largePlayBtn {
+  @extend .clearStdStyles, .flexCenter;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  svg {
+    filter: drop-shadow(0 0 5px $gray1);
+    transition: scale 0.25s ease;
+  }
+
+  &:hover svg {
+    scale: 1.1;
+  }
+}
+
+.fadeUp svg {
+  animation: fadeUp 0.45s ease-in-out reverse forwards;
+}
+
+.controlBarWrapper {
+  @extend .flexCenter;
+  width: 100%;
+  padding: 0 4rem;
+  position: absolute;
+  bottom: 3.5rem;
+}
+
+.controlBar {
+  @extend .spaceBetween;
+  width: 100%;
+  max-width: 1024px;
+  padding: 1.5rem 2.25rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5.25772px);
+  gap: 10px;
+  user-select: none;
+
+  button {
+    @extend .clearStdStyles;
+    @extend .flexCenter;
+    cursor: pointer;
+  }
+}
+
+.controlBar.lightBg {
+  background-color: $lightControlBar;
+  color: $primaryText;
+
+  svg path {
+    fill: $black;
+    stroke: $black;
+  }
+}
+
+.controlBar.darkBg {
+  background-color: $darkControlBar;
+  color: $white;
+}
+
+.controlBar.transparentBg {
+  background-color: none;
+  backdrop-filter: blur(0);
+  color: $white;
+}
+
+.controlButton {
+  @extend .clearStdStyles;
+  @extend .flexCenter;
+  height: 2rem;
+  width: 2rem;
+
+  svg path {
+    fill: $white;
+  }
+}
+
+.spin {
+  animation: rotate 1s linear infinite;
+}
+
+.durationAnalyzer {
+  @extend .flexCenter;
+  width: 75%;
+
+  .rangeSlider {
+    margin-bottom: 0.5rem;
+  }
+
+  span {
+    @extend .flexCenter;
+    max-width: 50px;
+    min-width: 50px;
+  }
+}
+
+.volumeBox {
+  position: relative;
+  @extend .flexCenter;
+  width: 22px;
+  transition: width 0.25s ease;
+
+  button {
+    min-width: 22px;
+    max-width: 22px;
+    min-height: 22px;
+    max-height: 22px;
+  }
+}
+
+.volumeSlider {
+  width: 75px;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+  display: none;
+}
+
+.showVolSlider {
+  width: 102px;
+
+  .volumeSlider {
+    display: flex;
+    transform: scaleX(1);
+  }
+}
+
+.settingsBox {
+  position: relative;
+}
+
+.settingsDropdown {
+  border-radius: 12px;
+  width: 240px;
+  padding: 1.25rem 0.25rem;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+
+  &:not(.showSettings) {
+    display: none;
+  }
+}
+
+.lightBg .settingsDropdown {
+  background-color: $white;
+
+  p,
+  select,
+  .dropdownHeading {
+    color: $black;
+  }
+
+  .settingsItem {
+    svg {
+      path {
+        fill: $white;
+      }
+
+      circle {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.transparentBg .settingsDropdown,
+.darkBg .settingsDropdown {
+  background-color: $gray0;
+
+  p,
+  select,
+  .dropdownHeading {
+    color: white;
+  }
+
+  .options {
+    background-color: $gray0;
+    color: white;
+  }
+
+  .settingsItem {
+    background-color: $gray0;
+    color: white;
+    svg {
+      path {
+        fill: $greyDescriptionText;
+      }
+
+      circle {
+        fill: $greyDescriptionText;
+      }
+    }
+  }
+}
+
+.dropdownHeading {
+  margin: 0 0 1rem;
+  padding: 0 1.25rem;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.settingsItem {
+  @extend .spaceBetween;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  gap: 0.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+
+  span {
+    @extend .flexCenter;
+    gap: 0.25rem;
+  }
+
+  &:hover {
+    background-color: $selectedMnemonicBackground;
+
+    .options {
+      display: flex;
+    }
+
+    p {
+      color: $primaryBlue;
+    }
+
+    svg {
+      path {
+        fill: $primaryBlue !important;
+      }
+
+      circle {
+        fill: $primaryBlue !important;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $gray0;
+    white-space: nowrap;
+  }
+
+  select {
+    @extend .clearStdStyles;
+    font-weight: 600;
+    font-size: 12.5px;
+    line-height: 160%;
+  }
+}
+
+.options {
+  position: absolute;
+  bottom: -20%;
+  left: 75%;
+  width: 75%;
+  max-width: 200px;
+  flex-direction: column;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  background-color: $white;
+  box-shadow: 0 0 25px $modalBoxShadow;
+  display: none;
+  color: black;
+
+  button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 13px;
+    border-radius: 8px;
+
+    &:hover {
+      color: $primaryBlue;
+      background-color: $selectedMnemonicBackground;
+    }
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: scale(110%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 648px) {
+  .controlBarWrapper {
+    display: none;
+  }
+}

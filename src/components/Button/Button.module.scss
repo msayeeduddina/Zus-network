@@ -1,0 +1,66 @@
+@import 'styles/common';
+
+.btn {
+  margin: 1rem 0;
+  display: flex;
+  position: relative;
+  color: white;
+  font-weight: 600;
+  padding: 1.2rem 3.6rem;
+  line-height: 1.875;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.8rem;
+  background: var(--gradient-zus);
+  cursor: pointer;
+  border: 0;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.vult {
+    background: var(--gradient-vult);
+  }
+
+  &.bolt {
+    background: var(--gradient-bolt);
+  }
+
+  &.white {
+    background: white;
+    color: var(--color-zus);
+    border: 1px solid var(--color-zus);
+  }
+
+  &.outline {
+    background: transparent;
+    color: $primaryBlue;
+    border: 1px solid $primaryBlue;
+  }
+
+  &.boltOutline {
+    background: transparent;
+    color: $primaryGreen;
+    border: 1px solid $primaryGreen;
+  }
+
+  figure {
+    display: flex;
+    align-items: center;
+  }
+
+  &.large {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+    font-size: 1.6rem;
+  }
+}
+
+.fullWidth {
+  display: block;
+  width: 100%;
+}

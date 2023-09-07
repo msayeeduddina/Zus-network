@@ -1,0 +1,1 @@
+export const selectNetwork = state => state.zerochain.network

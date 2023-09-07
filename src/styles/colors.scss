@@ -1,0 +1,65 @@
+$black: #000000;
+$white: #ffffff;
+
+$gray0: #202127;
+$gray1: #333333;
+$gray2: #4f4f4f;
+$gray3: #828282;
+$gray4: #bdbdbd;
+$gray5: #dcdee7;
+
+$primaryBlue: #175bff;
+$veryPaleBlue: #e8eeff;
+$secondaryGray: #5e647f;
+$grayishBlue: #bebeca;
+$primaryText: #000;
+$veryLightPaleBlue: #f3f5f9;
+$primaryGreen: #03c17d;
+$lightOrange: #ff6b00;
+$slightlyDesaturatedBlue: #384279;
+$primaryPink: #b35291;
+$lightPinkColor: #b35291;
+$semiBlack: rgb(30, 30, 30);
+$lightGreen: #33ce60;
+$midnightBlue: #061631;
+$lightBlue: #d0d6fb;
+$darkwhite: #e1e1e1;
+$pinkColor: #ff92e2;
+$darkBlack: #40444e;
+$greyDescriptionText: #90939e;
+$lightGrayishBlue: #cfcfe1;
+$lightGray: #d0d0d0;
+
+$darkGray: rgba(155, 155, 155, 0.15);
+$subTitleGray: rgba(0, 0, 0, 0.6);
+$hoverShadow: rgba(155, 155, 155, 0.45);
+$white50: rgba(255, 255, 255, 0.5);
+$greyLight: #f1f2f2;
+$veryDarkGray: rgba(100, 100, 100, 0.35);
+$tableBorderColor: rgba(139, 139, 139, 0.6);
+$lightControlBar: rgba(250, 251, 255, 0.5);
+$darkControlBar: rgba(45, 45, 45, 0.65);
+$overlayBackground: rgba(0, 0, 0, 0.5);
+$selectedMnemonicBackground: rgba(23, 91, 255, 0.1);
+$modalBoxShadow: rgba(0, 0, 0, 0.2);
+$lineShadeDark: rgba(139, 139, 139, 0.3);
+$zusWhitelight: rgba(250, 251, 255, 0.75);
+
+$primaryGradient: linear-gradient(121.99deg, #00d3ff -26.48%, #1a49ff 64.48%);
+$blimpGradiant: linear-gradient(135deg, #ffb156 0%, #ff4d00 55.52%);
+$chalkPrimaryGradientGreyDark: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ),
+  linear-gradient(135deg, #7781c6 0%, #384279 100%);
+
+$boltToastGradient: linear-gradient(39.18deg, #004f16 21.01%, #0d005a 139.72%);
+$rangeSliderBackground: linear-gradient(
+  90deg,
+  $darkwhite 0%,
+  $pinkColor 75.08%
+);
+
+$rangeSliderShadow: 0px 0.5px 4px rgba(0, 0, 0, 0.12),
+  0px 6px 13px rgba(0, 0, 0, 0.12);

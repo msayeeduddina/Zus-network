@@ -1,0 +1,30 @@
+@import 'styles/common';
+
+.container {
+  @extend .flexCenterCol;
+  width: 500px;
+  padding: 1rem;
+  color: $gray1;
+  background-color: $white50;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 0 30px $gray4;
+  overflow: hidden;
+
+  button {
+    flex-direction: row;
+    gap: 1rem;
+    min-width: 100px;
+    background-color: $white50;
+    transition: color, background-color 0.25s ease-in-out;
+
+    &:hover {
+      color: $white;
+      background-color: $primaryBlue;
+
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+}

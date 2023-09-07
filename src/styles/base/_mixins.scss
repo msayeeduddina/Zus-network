@@ -1,0 +1,35 @@
+$mq-xs: 33.375rem;
+$mq-sm: 48rem;
+$mq-md: 64rem;
+$mq-lg: 80rem;
+$mq-xl: 100rem;
+
+@mixin mq-xs {
+  @media (min-width: $mq-xs) {
+    @content;
+  }
+}
+
+@mixin mq-sm {
+  @media (min-width: $mq-sm) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (min-width: $mq-md) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (min-width: $mq-lg) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media (min-width: $mq-xl) {
+    @content;
+  }
+}

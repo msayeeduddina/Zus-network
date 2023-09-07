@@ -1,0 +1,14 @@
+@import './CommonStyles.scss';
+
+.docViewer {
+  @extend .clearStdStyles;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: $white;
+  border-radius: 12px;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $black;
+  }
+}

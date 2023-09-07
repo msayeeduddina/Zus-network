@@ -1,0 +1,17 @@
+.infoBox {
+  background: #fff;
+  border: 1px solid rgb(var(--color-border));
+  padding: 3rem 2rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .infoBox {
+    padding: 3rem 5.5rem;
+  }
+
+  .createWallet {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}

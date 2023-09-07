@@ -1,0 +1,193 @@
+@import './colors.scss';
+
+.flex {
+  display: flex;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexCenterBaseline {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.flexCenterCol {
+  @extend .flexCenter;
+  flex-direction: column;
+}
+
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spaceBetweenCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spaceEvenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.clearStdStyles {
+  background: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  user-select: none;
+  -moz-user-select: none;
+  box-shadow: none;
+  border: none;
+}
+
+.disableSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.miniSpinner {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid $white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $secondaryGray;
+    animation: rotate 1.25s ease-in-out infinite;
+  }
+}
+
+.divider {
+  border-bottom: 1px solid lighten($secondaryGray, 40%);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blowUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, 130%) scale(0);
+    opacity: 0;
+  }
+  75% {
+    transform: translate(-50%, -5%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+}

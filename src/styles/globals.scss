@@ -1,0 +1,54 @@
+:root {
+  --max-width: 1100px;
+
+  --font-heading: Averta Std, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  --font-body: Averta Std, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --color-background: 243, 245, 249;
+  --color-border: 204, 204, 204;
+  --color-heading: 32, 33, 39;
+  --color-text: 32, 33, 39;
+  --color-muted: 144, 147, 158;
+
+  --gradient-zus: linear-gradient(
+    122deg,
+    rgb(0, 211, 255) -26.48%,
+    rgb(26, 73, 255) 64.48%
+  );
+  --gradient-vult: linear-gradient(
+    45deg,
+    rgb(126, 206, 255) 0%,
+    rgb(44, 87, 255) 100%
+  );
+  --gradient-bolt: linear-gradient(
+    39.18deg,
+    rgb(3, 193, 125) 21.01%,
+    rgb(151, 232, 28) 139.72%
+  );
+
+  --fs-100: 1rem;
+  --fs-200: 1.2rem;
+  --fs-300: 1.4rem;
+  --fs-400: 1.6rem;
+  --fs-500: 2rem;
+  --fs-600: 2.4rem;
+  --fs-700: 3rem;
+  --fs-800: 3.6rem;
+  --fs-900: 4.8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@import 'font-faces';
+@import 'base/mixins';
+@import 'base/base';
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

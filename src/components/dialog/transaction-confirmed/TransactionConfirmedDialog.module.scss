@@ -1,0 +1,115 @@
+@import 'styles/common';
+@import '../bolt-dialog-common.scss';
+
+.transactionConfirmedDialog {
+  width: 468px;
+  border-radius: 12px;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.buttonIcon {
+  margin-right: 20px;
+  display: flex;
+}
+
+.subTitle {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.54px;
+  text-align: center;
+  color: $subTitleGray;
+  margin: 3vh;
+}
+
+.coinAmount {
+  display: flex;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: $semiBlack;
+}
+
+.coinSymbol {
+  font-weight: 400;
+  font-size: 14px;
+  color: $semiBlack;
+  margin-left: 5px;
+}
+
+.usdAmount {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: $semiBlack;
+  margin-top: 21px;
+}
+
+.firstButton {
+  margin: 2vh 0;
+  width: 90%;
+}
+
+.walletAddressContainer {
+  @extend .flexCenter;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.walletAddress {
+  width: 100%;
+  font-size: 11px !important;
+  margin-right: -4px;
+  overflow-wrap: break-word;
+}
+
+.leftContainer {
+  @extend .flexCenterCol;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.rightContainer {
+  @extend .flexCenterCol;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.notesDetailsContainer {
+  @extend .flexCenterCol;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.columnLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: $secondaryGray;
+}
+
+.columnContent {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18.54px;
+  color: $primaryText;
+}
+
+.loadingContainer {
+  min-height: 200px;
+}
+
+.heading {
+  width: 94% !important;
+  font-size: 18px !important;
+  overflow-wrap: break-word;
+  text-align: left !important;
+}
+
+@media screen and (max-width: 960px) {
+  .transactionConfirmedDialog {
+    width: 350px;
+    padding: 0.5rem 1rem 0rem 1rem;
+  }
+}

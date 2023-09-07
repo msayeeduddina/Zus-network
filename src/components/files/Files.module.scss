@@ -1,0 +1,50 @@
+@import 'styles/common';
+
+.filesWrapper {
+  @extend .flexCol;
+  width: 100%;
+  gap: 12px;
+
+  input {
+    display: none;
+  }
+}
+
+.head {
+  padding: 1rem 0;
+
+  &,
+  .btnsBox {
+    @extend .spaceBetween;
+    gap: 1.6rem;
+
+    button {
+      padding: 1rem 1.5rem;
+
+      &:hover {
+        color: $white;
+        background-color: $primaryBlue;
+
+        &:first-of-type svg path {
+          fill: $white;
+        }
+
+        &:last-of-type svg path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}
+
+.heading {
+  @extend .flexStart;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filesContainer {
+  @extend .flexCol;
+  gap: 1.6rem;
+  padding-bottom: 10rem;
+}

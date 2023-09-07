@@ -1,0 +1,97 @@
+@import 'styles/common';
+
+.dialog {
+  width: 468px;
+  padding: 2rem 3rem 1rem;
+}
+
+.header {
+  button:has(svg) {
+    right: 0 !important;
+  }
+}
+
+.btnDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.headerWithFileName {
+  p,
+  span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0;
+  }
+
+  .fileName {
+    @extend .textEllipsis;
+    max-width: 150px;
+    margin-bottom: -0.285rem;
+  }
+}
+
+.errText {
+  margin-top: -3vh;
+}
+
+@media screen and (max-width: 648px) {
+  .wrapper:not(:has(.centered)) {
+    align-items: flex-end !important;
+  }
+
+  .dialog {
+    &:not(.centered) {
+      width: 100vw;
+      border-radius: 12px 12px 0 0;
+      transform: translateY(100vh);
+      transform-origin: bottom center;
+      animation-name: growFromBottom;
+      padding: 1rem;
+      padding-bottom: 2.75rem;
+      position: fixed;
+      bottom: 0;
+    }
+
+    &.centered {
+      width: calc(100vw - 2rem);
+      max-width: 300px;
+    }
+  }
+
+  .header {
+    padding: 0.5rem 0 !important;
+
+    button {
+      font-size: 14px;
+      padding: 0.45rem 0.75rem;
+    }
+  }
+
+  .headerActionBtn {
+    order: 2;
+  }
+
+  .footer {
+    & > div:last-of-type {
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        width: 100%;
+        padding: 0.7rem;
+
+        &:first-of-type {
+          order: 2;
+        }
+
+        &:last-of-type {
+          order: 1;
+        }
+      }
+    }
+  }
+}

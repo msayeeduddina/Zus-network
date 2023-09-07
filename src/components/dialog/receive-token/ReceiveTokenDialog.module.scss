@@ -1,0 +1,156 @@
+@import 'styles/common';
+@import 'styles/colors';
+
+.receiveTokenDialog {
+  width: 100%;
+  border-radius: 12px;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.header {
+  padding-left: 0;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.icon {
+  color: $semiBlack;
+  svg path {
+    fill: $semiBlack;
+  }
+}
+
+.buttonIcon {
+  margin-right: 20px;
+  display: flex;
+}
+
+.subTitle {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18.54px;
+  text-align: center;
+  color: $subTitleGray;
+  margin: 3vh;
+}
+
+.firstButton {
+  margin: 2vh 0;
+  width: 90%;
+}
+
+.walletAddressContainer {
+  @extend .flexCenter;
+  margin: 20px 0;
+  padding: 12px;
+  width: 100%;
+  border: 1px solid $grayishBlue;
+  border-radius: 8px;
+}
+
+.addressDetailsContainer {
+  @extend .flexCenterCol;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.addressLabel {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: $secondaryGray;
+}
+
+.addressContent {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19.78px;
+  color: $primaryText;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.iconContainer {
+  @extend .flexCenter;
+  width: 30%;
+  button {
+    margin: 0 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:last-child {
+      margin: 0 5px 0 0;
+    }
+  }
+}
+
+.confirmationToast {
+  width: 380px;
+  height: 80px;
+  background: $boltToastGradient;
+  border-radius: 20px;
+
+  p {
+    color: $white;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  span {
+    color: $lightGreen;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+}
+
+.blimpTheme {
+  .iconContainer {
+    button:first-of-type svg path {
+      stroke: $lightOrange;
+    }
+
+    button:last-of-type svg path {
+      fill: $lightOrange;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .receiveTokenDialog {
+    width: 300px;
+  }
+
+  .confirmationToast {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .receiveTokenDialog {
+    width: 90vw;
+  }
+
+  .firstButton {
+    width: 100%;
+  }
+
+  .addressDetailsContainer {
+    width: 82%;
+  }
+
+  .confirmationToast {
+    width: 90vw;
+  }
+
+  .iconContainer {
+    padding-left: 1rem;
+  }
+}

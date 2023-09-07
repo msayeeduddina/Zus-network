@@ -1,0 +1,100 @@
+@import 'styles/common';
+
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 6.5rem;
+  background: #fff;
+  box-shadow: 0px 0px 52px rgb(0 0 0 / 8%);
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  column-gap: 1rem;
+
+  a {
+    display: block;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+
+  svg {
+    height: 2.4rem;
+    display: block;
+  }
+
+  .active {
+    display: none;
+  }
+}
+
+:global(.sidebarActive) {
+  .menu {
+    .inactive {
+      display: none;
+    }
+    .active {
+      display: inline-block;
+    }
+  }
+}
+
+.right {
+  @extend .flexCenter;
+  gap: 1rem;
+}
+
+.avatar {
+  font-weight: 600;
+  line-height: 6.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+
+  figure {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+.btn {
+  @extend .clearStdStyles, .flexCenter;
+  color: $white;
+  font-size: 1.5rem;
+  background: $primaryBlue;
+  padding: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .siteHeader {
+    padding: 0 5rem;
+  }
+
+  .menu {
+    display: none !important;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'styles/common';
+
+.container {
+  width: 100%;
+  max-width: 646px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 145%;
+}
+
+.line {
+  border-top: 1px solid $lineShadeDark;
+}
+
+.header {
+  @extend .spaceBetween;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.children {
+  padding: 0rem 1rem 1rem;
+}

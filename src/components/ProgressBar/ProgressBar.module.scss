@@ -1,0 +1,53 @@
+.bg {
+  height: 1rem;
+  margin: 2rem 0 5rem;
+  position: relative;
+
+  &::before,
+  .progress {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background: var(--gradient-zus);
+  }
+
+  &.bolt {
+    &::before,
+    .progress {
+      background: var(--gradient-bolt);
+    }
+  }
+
+  &.vult {
+    &::before,
+    .progress {
+      background: var(--gradient-vult);
+    }
+  }
+
+  &::before {
+    content: "";
+    opacity: 0.1;
+  }
+}
+
+.progress {
+  max-width: 100%;
+}
+
+.labelLeft,
+.labelRight {
+  font-size: 1.1rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+}
+
+.labelRight {
+  left: auto;
+  right: 0;
+}

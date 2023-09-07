@@ -1,0 +1,107 @@
+@import './CommonStyles.scss';
+
+.imageViewer {
+  @extend .flexCenter;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-track-color: transparent;
+  z-index: 1;
+
+  &:not(.fullScreenImage) {
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+    transition: scale 0.15s ease-in-out;
+  }
+}
+
+.controls {
+  @extend .flexCenter;
+  position: absolute;
+  bottom: 20vh;
+  right: 15.5vw;
+  gap: 0.25rem;
+  background-color: $white50;
+  backdrop-filter: blur(10px);
+  border-radius: 54px;
+  box-shadow: 0 0 12px $gray1;
+  z-index: 3;
+
+  button {
+    @extend .btn;
+    border-radius: 12px;
+    opacity: 0.8;
+
+    &:first-of-type {
+      border-top-left-radius: 54px;
+      border-bottom-left-radius: 54px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 54px;
+      border-bottom-right-radius: 54px;
+    }
+
+    svg path {
+      fill: $gray1;
+    }
+
+    &:hover {
+      background-color: $veryPaleBlue;
+      opacity: 1;
+    }
+  }
+}
+
+.fullScreenImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // z-index: 1;
+  overflow: auto;
+  background-color: $black;
+  // animation: addShade 0.55s ease-in-out forwards;
+
+  // img {
+  //   transform: translateY(-7.5vh) scale(0.7);
+  //   animation: blowUp 0.25s 0.15s ease-in-out forwards;
+  // }
+
+  & ~ .controls {
+    // transition: 0.25s 0.15s ease-in-out;
+    bottom: 5vh;
+    right: 5vw;
+  }
+}
+
+// @keyframes addShade {
+//   100% {
+//     background-color: $black;
+//   }
+// }
+
+// @keyframes blowUp {
+//   0% {
+//     transform: translateY(-7.5vh) scale(0.7);
+//   }
+//   100% {
+//     transform: translateY(0%) scale(1);
+//   }
+// }
+
+@media (max-width: 648px) {
+  .imageViewer {
+    border-radius: unset !important;
+  }
+}
